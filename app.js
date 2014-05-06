@@ -17,6 +17,10 @@ app.use('/world', function (req, res, next) {
   next();
 });
 
+app.use( function(req, res, next){
+    return res.end();
+})
+
 app.use('/', function (req, res, next) {
   res.end();
   console.log('END');
